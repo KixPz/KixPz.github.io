@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="IMAGE-BusinessLogo.png">
+
+    <link rel="stylesheet" href="BakeBotsStyle.css">
+
+    <title>BakeBots</title>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var header = document.querySelector("#main-header");
+            var headerHeight = header.offsetHeight;
+            document.documentElement.style.setProperty('--main-header-height', headerHeight + 'px');
+        });
+    </script>
+    
+</head>
+
+<body>
+    <!-- Crea cabecera -->
+    <header id="main-header">
+        <nav class="nav">
+            <ul class="nav__list">
+                <li id="logo-header" class="nav__item">
+                    <a id="logo-header" href="https://www.youtube.com/watch?v=ELSm-G201Ls&t=35090s" target="_blank">
+                        <img src="IMAGE-BuisnessFullLogo-remove.png" alt="Logo de negocio" style="height: 70px;">
+                    </a>
+                </li>
+
+                <div class="nav__list nav__list__container">
+                    <li id="inicio" class="nav__item nav_main_link">
+                        <a href="BakeBotsPage.html" class="nav__link">Inicio</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="nosotrosPage.html" class="nav__link">Nosotros</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="ProductsPage.html" class="nav__link">Productos</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="ContactPage.html" class="nav__link">Contacto</a>
+                    </li>
+                </div>
+            </ul>
+        </nav>
+    </header>
+    <main>
+
+        <!-- Presentacion de la empresa -->
+        <section id="company-presentation">
+            <!-- div para dar opacidad y poner el BakeBots -->
+            <div class="opacidad">
+                <div class="company-presentation__text">
+                    <span>BakeBots</span>
+                    <span>BakeBots</span>
+                </div>
+            </div>
+        </section>
+
+        <section class = "meet-bakebots">
+
+            <div class="card">
+
+                <div class="card-info">
+                    <h3 class="title primary-text">Mantenimiento tecnico e industrial </h3>
+                    <p class="title secondary-text">Damos soporte técnico online, conectándonos en remoto al robots, aportando rapidez en la solución de
+                        incidencias y a un menor coste.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-info">
+                    <h3 class="title primary-text">Renting Tecnológico para la máquina de paletizado </h3>
+                    <p class="title secondary-text">Optimiza tu paletizado con nuestro Renting Tecnológico. La solución ideal para tu maquina de paletizado. Aumenta la eficiencia y reduce costos.</p>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="news-conatiner">
+            <!-- Apartado de novedades -->
+            <h2 class="news">Novedades</h2>
+            <!-- Poner contenido tipo imagenes o videos -->
+            <div class="video-wrapper">
+                <video src="ruta_del_video_1.mp4" controls></video>
+                <video src="ruta_del_video_2.mp4" controls></video>
+                <video src="ruta_del_video_3.mp4" controls></video>
+
+            </div>
+
+        </section>
+
+        <section id = "work-with-us"> 
+            <H2 id="work-with-us-text">Preguntas frequentes de los nuevos clientes</H2>
+
+            <div class="cards-question-container">
+
+                <div class="card-question">
+                    <div class="align">
+                        <span class="red"></span>
+                        <span class="yellow"></span>
+                        <span class="green"></span>
+                    </div>
+                
+                    <h1>¿Porqué elegir BakeBots?</h1>
+                    <p>
+                        Cuando se trata de abordar sus retos panaderos,
+                        BakeBots ayuda de manera eficiente y precias para darle la solucion ideal
+                    </p>
+                </div>
+    
+                <div class="card-question">
+                    <div class="align">
+                        <span class="red"></span>
+                        <span class="yellow"></span>
+                        <span class="green"></span>
+                    </div>
+                
+                    <h1>¿Cómo garantizamos la integración de robots industriales?</h1>
+                    <p>
+                        En una rápida llamada, te brindamos una demostración sobre cómo logramos una exitosa integración
+                        de robots en su fabrica. Descubrirás cómo BeakBots puede:
+                    </p>
+                    <ul>
+                        <li>Nuestros robots ofrecen flexibilidad total. Tienes el control para moverlos
+                            fácilmente dentro de tus instalaciones, sin obstáculos, lo que optimiza tu proceso de
+                            producción.</li>
+                        <li>Garantizamos la calidad de nuestros robots al usar componentes de primeras
+                            marcas y productos de alta calidad, lo que aumenta la durabilidad y eficiencia.
+                        </li>
+                        <li> En BakeBots, priorizamos la facilidad de uso y configuración de nuestros robots
+                            paletizadores. Ofrecemos un diseño intuitivo y una interfaz amigable para una puesta en
+                            marcha rápida y sin complicaciones.</li>
+                    </ul>
+                </div>
+
+                <div class="card-question">
+                    <div class="align">
+                        <span class="red"></span>
+                        <span class="yellow"></span>
+                        <span class="green"></span>
+                    </div>
+                
+                    <h1>HOVER ME</h1>
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde explicabo enim rem odio assumenda?
+                    </p>
+                </div>
+
+                <div class="card-question">
+                    <div class="align">
+                        <span class="red"></span>
+                        <span class="yellow"></span>
+                        <span class="green"></span>
+                    </div>
+                
+                    <h1>HOVER ME</h1>
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde explicabo enim rem odio assumenda?
+                    </p>
+                </div>
+
+            </div>
+            
+        </section>
+
+
+        <section id = "companies-believe">
+
+            <div class="card__companies-belive">
+                
+                <div class="companies-belive__conatiner">
+                <h2>Compañias que confian en nosotros</h2>
+                
+                <div class="companies-belive__img-container">
+                    <img src="#" alt="Logo compañia">
+                    <img src="#" alt="Logo compañia">
+                    <img src="#" alt="Logo compañia">
+                    <img src="#" alt="Logo compañia">
+                </div>
+
+                </div>
+            </div>
+            
+
+        </section>

@@ -1,0 +1,206 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: whitesmoke;
+    background-color: #000000;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+}
+
+/*########################################## Cabecera ##################################### */
+header {
+    width: 100%;
+    position: fixed;
+    z-index: 1000;
+    max-width: 100vw;
+
+}
+
+.nav {
+    background-color: #48e;
+    display: flex;
+    /* Convierte el contenedor en flex */
+    flex-wrap: wrap;
+    align-items: center;
+    /* Centra verticalmente los elementos */
+    justify-content: center;
+    /* Centra horizontalmente los elementos */
+    padding: 10px 20px;
+    /* Añade padding para un poco de espacio a los lados */
+    box-shadow: 0 0 25px #0006;
+}
+
+.nav__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    /* Para eliminar los puntos de la lista */
+    text-align: end;
+    display: flex;
+    /* Cambia para un diseño flexible */
+    align-items: center;
+    /* Centra verticalmente los elementos */
+    flex-wrap: wrap;
+}
+
+.nav__item {
+    padding: 10px 20px;
+}
+
+.nav__link {
+    color: #FFF;
+    text-decoration: none;
+    font-size: large;
+}
+
+.nav__item:hover {
+    background-color: #59e;
+}
+
+.nav_main_link {
+    border-bottom: solid 2px #fff;
+}
+
+#logo-header {
+    align-items: center;
+    /* Alinea verticalmente el logo */
+    height: 70px;
+}
+
+@media (max-width: 767px) {
+    .nav__list__container {
+        display: flex;
+        /* Hace que el contenido en el interior sea flexible */
+        flex-direction: row;
+        /* Cambia la dirección de los bloques a una columna en dispositivos móviles */
+        align-items: center;
+        /* Centra los bloques horizontalmente */
+        gap: 10px 20px;
+        /* Espacio entre los items de la lista*/
+        width: 100%;
+        justify-content: center;
+        margin-top: 5%;
+    }
+
+    .nav__item {
+        padding: 10px 5px;
+    }
+
+    #logo-header {
+        margin: auto;
+    }
+
+}
+
+.parent {
+    margin-bottom: 20px;
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 8px;
+    background-color: rgb(69, 86, 108);
+    border-radius: 40px;
+}
+
+.destacable-parent
+{
+    filter: blur(5px);
+    background-color: rgba(60, 74, 93, 0.753);
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+
+.big-text
+{
+    font-size: 300%;
+}
+
+.div3 {
+    grid-row: span 3 / span 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.div4 {
+    grid-row: span 2 / span 2;
+    padding: 100px 20px;
+}
+
+.div5 {
+    grid-column-start: 2;
+    grid-row-start: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 100px;
+}
+
+#Producto {
+    margin-top: calc(var(--main-header-height) + 100px);
+    height: auto; /* Cambia de 400px a auto */
+    width: 70vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.imagecontainer
+{
+    height: 500px;
+    width: 500px;
+    background-image: url("https://automatizaciones.mx/wp-content/uploads/2021/05/brazos-roboticos-industriales-color-amarillo.png");
+    background-repeat: no-repeat;
+    background-size:contain;
+    background-position: center;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40px;
+    margin-left: 50px;
+}
+
+.div4 p 
+{
+    text-decoration: none;
+    text-align: justify;
+    font-weight: 500;
+    margin-right: 50px;
+}
+
+#Producto .div5 button
+{
+    font-size: 1.4em;
+    padding: 0.6em 0.8em;
+    border-radius: 0.5em;
+    border: none;
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 2px 2px 3px #000000b4;
+    margin-right: 50px;
+}
+#Producto .div5 button:hover
+{
+    background-color: #333232;
+    
+}
+
+button a
+{
+    text-decoration: none;
+    color: #fff;
+}
+

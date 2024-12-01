@@ -1,0 +1,490 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: sans-serif, Arial, Helvetica;
+    color: whitesmoke;
+    background-color: #000000;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/*########################################## Cabecera ##################################### */
+header {
+    width: 100%;
+    position: fixed;
+    z-index: 1000;
+    max-width: 100vw;
+    position: fixed;
+}
+
+.nav {
+    background-color: #48e;
+    display: flex;
+    /* Convierte el contenedor en flex */
+    flex-wrap: wrap;
+    align-items: center;
+    /* Centra verticalmente los elementos */
+    justify-content: center;
+    /* Centra horizontalmente los elementos */
+    padding: 10px 20px;
+    /* Añade padding para un poco de espacio a los lados */
+    box-shadow: 0 0 25px #0006;
+}
+
+.nav__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    /* Para eliminar los puntos de la lista */
+    text-align: end;
+    display: flex;
+    /* Cambia para un diseño flexible */
+    align-items: center;
+    /* Centra verticalmente los elementos */
+    flex-wrap: wrap;
+}
+
+.nav__item {
+    padding: 10px 20px;
+}
+
+.nav__link {
+    color: #FFF;
+    text-decoration: none;
+    font-size: large;
+}
+
+.nav_main_link
+{
+    border-bottom:solid 2px #fff;
+}
+
+
+.nav__item:hover {
+    background-color: #59e;
+}
+
+#logo-header {
+    align-items: center;
+    /* Alinea verticalmente el logo */
+    height: 70px;
+}
+
+@media (max-width: 767px) {
+    .nav__list__container {
+        display: flex;
+        /* Hace que el contenido en el interior sea flexible */
+        flex-direction: row;
+        /* Cambia la dirección de los bloques a una columna en dispositivos móviles */
+        align-items: center;
+        /* Centra los bloques horizontalmente */
+        gap: 10px 20px;
+        /* Espacio entre los items de la lista*/
+        width: 100%;
+        justify-content: center;
+        margin-top: 5%;
+    }
+
+    .nav__item {
+        padding: 10px 5px;
+    }
+
+    #logo-header {
+        margin: auto;
+    }
+
+
+
+}
+
+
+
+/*########################################## Presentacion empresa ##################################### */
+#company-presentation {
+    height: 100vh;
+    width: 100vw;
+    margin-top: var(--main-header-height);
+    background-image: url("https://automatizaciones.mx/wp-content/uploads/2021/05/brazos-roboticos-industriales-color-amarillo.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.company-presentation__text {
+    position: relative;
+    margin: auto;
+
+}
+
+.company-presentation__text span {
+    position: absolute;
+    display: block;
+    color: #fff;
+    transform: translate(-50%, -50%);
+    font-size: 38px;
+    letter-spacing: 5px;
+    background-color: rgb(41, 39, 39);
+    border-radius: 40px;
+    padding: 15px;
+    box-shadow: 1px 1px 20px gray;
+}
+
+.company-presentation__text span:nth-child(1) {
+    color: transparent;
+    -webkit-text-stroke: 0.3px rgb(128, 198, 255);
+}
+
+.company-presentation__text span:nth-child(2) {
+    color: rgb(128, 198, 255);
+    -webkit-text-stroke: 1px rgb(128, 198, 255);
+    animation: uiverse723 3s ease-in-out infinite;
+}
+
+@keyframes uiverse723 {
+
+    0%,
+    100% {
+        clip-path: polygon(0% 45%, 15% 44%, 32% 50%, 54% 60%, 70% 61%, 84% 59%, 100% 52%, 100% 100%, 0% 100%);
+    }
+
+    50% {
+        clip-path: polygon(0% 60%, 16% 65%, 34% 66%, 51% 62%, 67% 50%, 84% 45%, 100% 46%, 100% 100%, 0% 100%);
+    }
+}
+
+.opacidad {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.695);
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+@media(max-width: 767px) {
+
+    #company-presentation {
+        height: 100vh;
+        width: 100%;
+        margin-top: var(--main-header-height);
+        background-image: url("https://automatizaciones.mx/wp-content/uploads/2021/05/brazos-roboticos-industriales-color-amarillo.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        justify-content: center;
+    }
+
+    .company-presentation__text span {
+        font-size: 25px;
+    }
+
+}
+/* CONOCENOS */
+
+.meet-bakebots {
+    display: flex;
+    flex-direction: row;
+    gap: 150px;
+    flex-basis: 0;
+    justify-content: center;
+    margin: 10%;
+}
+
+.card {
+    --background: linear-gradient(to right, #13b37f 0%, #11a3c8 100%);
+    width: 40%;
+    height: 254px;
+    padding: 0.9px;
+    border-radius: 0.7rem;
+    overflow: visible;
+    background: #f7ba2b;
+    background: var(--background);
+    position: relative;
+    z-index: 1;
+}
+
+.card::after {
+    position: absolute;
+    content: "";
+    top: 0px;
+    left: 0px;
+    right: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    transform: scale(0.9);
+    filter: blur(34.5px);
+    background: #f7ba2b;
+    background: var(--background);
+    transition: opacity 0.5s;
+}
+
+.card-info {
+    --color: #1f1a1d;
+    background: var(--color);
+    color: var(--color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    border-radius: 0.7rem;
+    flex-direction: column;
+}
+
+.card .title {
+    font-weight: light;
+    letter-spacing: 0.2em;
+    color: white;
+}
+
+.primary-text,
+.secondary-text {
+    margin: 20px 20px;
+    text-align: center;
+
+}
+
+@media(max-width: 767px) {
+    .meet-bakebots {
+        display: flex;
+        flex-direction: column;
+        flex-basis: 0;
+        justify-content: center;
+        align-items: center;
+        margin: 10%;
+        gap: 40px;
+    }
+
+    .card {
+        --background: linear-gradient(to right, #13b37f 0%, #11a3c8 100%);
+        width: 80%;
+        height: 254px;
+        padding: 0.9px;
+        border-radius: 0.7rem;
+        overflow: visible;
+        background: #f7ba2b;
+        background: var(--background);
+        position: relative;
+        z-index: 1;
+    }
+}
+
+
+/**/
+
+#news {
+    text-align: center;
+    width: 100%;
+}
+
+#news-conatiner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 40px 0 40px 0;
+    background-color: #1a1b1f;
+    padding: 0;
+}
+
+#news-container {
+    width: 100%;
+    display: flexbox;
+    padding-bottom:70px ;
+}
+
+video {
+    width: 30%;
+    margin: 20px 0 10px 0;
+    border-radius: 10px;
+}
+
+.video-wrapper {
+    text-align: center;
+    width: 100%;
+    background-color: #5b5b5d;
+    border-radius: 10px;
+    margin: 50px;
+
+}
+
+@media (max-width: 768px) {
+    video {
+        justify-content: center;
+        flex-direction: column;
+        /* Cambia la dirección de los bloques a una columna en dispositivos móviles */
+        align-items: center;
+        /* Centra los bloques horizontalmente */
+        width: 20%;
+        border-radius: 10px;
+        width: calc(100% - 40px);
+        /* Ancho completo menos el margen en dispositivos móviles */
+        max-width: 100%;
+        /* Ancho máximo completo en dispositivos móviles */
+        margin: 10px;
+        /* Espacio entre los bloques en dispositivos móviles */
+    }
+}
+
+/**/
+#work-with-us
+{
+    margin: 40px 0 120px 0;
+}
+
+#work-with-us h2
+{
+text-align: center;
+}
+
+
+
+.cards-question-container
+{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding: 40px 0;
+}
+
+/* From Uiverse.io by Fcodingx */
+.card-question {
+    width: 80%;
+    height: 120px;
+    padding: 0.5rem;
+    background: rgba(88, 156, 201, 0.696);
+    border-radius: 8px;
+    backdrop-filter: blur(5px);
+    border-bottom: 3px solid rgba(255, 255, 255, 0.440);
+    border-left: 2px rgba(255, 255, 255, 0.545) outset;
+    box-shadow: -40px 50px 30px rgba(0, 0, 0, 0.280);
+    transform: skewX(10deg);
+    transition: .4s;
+    overflow: hidden;
+    color: white;
+    margin:70px;
+
+}
+
+.card-question:hover {
+    height:min-content;
+    transform: skew(0deg);
+    margin: auto;
+}
+
+.align {
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    align-self: flex-start;
+}
+
+.red {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ff605c;
+    box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.280);
+}
+
+.yellow {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ffbd44;
+    box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.280);
+}
+
+.green {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #00ca4e;
+    box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.280);
+}
+
+.card-question h1 {
+    text-align: center;
+    margin: 1.3rem;
+    margin-bottom: 5%;
+    color: rgb(218, 244, 237);
+    text-shadow: -10px 5px 10px rgba(0, 0, 0, 0.573);
+}
+
+/**/
+
+#companies-believe {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 150px;
+    flex-basis: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.card__companies-belive {
+    --background: linear-gradient(to right, #13b37f 0%, #11a3c8 100%);
+    width: 100%;
+    height: 254px;
+    padding: 0.9px;
+    overflow: visible;
+    background: #f7ba2b;
+    background: var(--background);
+    position: relative;
+    z-index: 1;
+}
+
+.companies-belive__conatiner::after {
+    position: absolute;
+    content: "";
+    top: 0px;
+    left: 0px;
+    right: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    transform: scale(0.9);
+    filter: blur(34.5px);
+    background: #f7ba2b;
+    background: var(--background);
+    transition: opacity 0.5s;
+}
+
+.companies-belive__conatiner {
+    --color: #1f1a1d;
+    background: var(--color);
+    color: #FFF;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    flex-direction: row;
+    gap: 10%;
+}
+
+.companies-belive__img-container
+{
+    display: flex;
+    width: auto;
+    height: min-content;
+    justify-content: center;
+    align-items: center;
+    gap: 10%;
+    margin-top: 5%;
+} 

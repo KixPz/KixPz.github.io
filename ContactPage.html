@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="IMAGE-BusinessLogo.png">
+    <link rel="stylesheet" href="ContactStyle.css">
+    <title>BakeBots</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var header = document.querySelector("#main-header");
+            var headerHeight = header.offsetHeight;
+            document.documentElement.style.setProperty('--main-header-height', headerHeight + 'px');
+        });
+    </script>
+</head>
+
+<body>
+    <header id="main-header">
+        <nav class="nav">
+            <ul class="nav__list">
+                <li id="logo-header" class="nav__item">
+                    <a id="logo-header" href="BakeBotsPage.html">
+                        <img src="IMAGE-BuisnessFullLogo-remove.png" alt="Logo de negocio" style="height: 70px;">
+                    </a>
+                </li>
+                <div class="nav__list nav__list__container">
+                    <li id="inicio" class="nav__item">
+                        <a href="BakeBotsPage.html" class="nav__link">Inicio</a>
+                    </li>
+                    <li class="nav__item ">
+                        <a href="nosotrosPage.html" class="nav__link">Nosotros</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="ProductsPage.html" class="nav__link">Productos</a>
+                    </li>
+                    <li class="nav__item nav_main_link">
+                        <a href="ContactPage.html" class="nav__link">Contacto</a>
+                    </li>
+                </div>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="introduction">
+        <div class="introduction__grid">
+            <div class="introduction__grid__item grid__item-1">
+                <h1>Expertos en Robótica Colaborativa en España</h1>
+            </div>
+            <div class="introduction__grid__item grid__item-2">
+                <h2>El éxito de nuestros clientes es nuestro éxito.</h2>
+            </div>
+            <div class="introduction__grid__item grid__item-3">
+                <p>Somos conscientes de la particularidad de cada proyecto, por lo que nos ajustamos a las necesidades
+                    de cada cliente y hacemos nuestros sus objetivos.</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <div id="form-contact">
+            <div class="FormPlace">
+                <div class="form-container">
+                    <form id="myForm">
+                        <h2>Formulario de contacto</h2>
+                        <fieldset>
+                            <legend>Información básica</legend>
+                            <input type="text" name="user_name" placeholder="Nombre*" required minlength="3">
+                            <input type="text" name="user_surname" placeholder="Apellido*" required minlength="3">
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>Información de contacto</legend>
+                            <input type="email" name="user_email" placeholder="example@gmail.com*" required>
+                            <input type="tel" name="user_phone-number" placeholder="Teléfono*" pattern="[0-9]{9}"
+                                required>
+                            <input type="text" name="user_company" placeholder="Empresa*" required>
+                            <select name="user_company-rank">
+                                <option value="">Cargo en la empresa</option>
+                                <option value="CEO">CEO / Director general / Gerente</option>
+                                <option value="Ingeniería">Responsable de ingeniería / Oficina técnica</option>
+                                <option value="Producción">Responsable / Gerente de producción</option>
+                                <!-- Agrega más opciones según sea necesario -->
+                            </select>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>Mensaje del usuario</legend>
+                            <textarea id="comentarios" name="user_message" rows="10" cols="50" placeholder="Mensaje*"
+                                required></textarea>
+                        </fieldset>
+
+                        <button id="submit-button"><input type="submit" name="user_submit"></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="Demo">
+            <h3>Agenda una DEMO Gratuita</h3>
+            <p>Nos comprometemos en la mejora constante de sus procesos productivos. Por ellos nos gustaría demostrar como otras empresas han conseguido un incremento de su producción en las líneas de packaging, por encima del 20 % utilizando nuestras máquinas de paletizado.</p>
+            <button></button>
+        </div>
+        <div class="Call-Us"></div>
+        <h3>¿Prefieres llamarnos?</h3>
+        <p>Si te sientes más cómodo manteniendo una conversación telefónica, estaremos encantados de atenderte de lunes a viernes, de 7:00 a 15:00, en horario de Madrid, a través del siguiente número de teléfono:</p>
+        <button></button>
+        <div class="Where-we-are">
+            <h3>¿Dónde estamos?</h3>
+            <p>Estamos en no te importa</p>
+        </div>
+        <div class="We-expect-meet-you-here">
+            <h3>¡Esperamos conectarnos contigo en esta plataforma profesional!</h3>
+            <p>Síguenos en LinkedIn para mantenerte al tanto de las últimas novedades, noticias, y contenido relacionado con nuestra empresa! Únete a nuestra comunidad y sé parte de conversaciones relevantes en tu industria.</p>
+        </div>
+</body>
+
+</html>
