@@ -1,388 +1,208 @@
-html,
-body {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-}
+<!DOCTYPE html>
 
-body {
-    font-family: Arial, sans-serif;
-    color: whitesmoke;
-    background-color: #000000;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+<html lang="es">
 
-/*########################################## Cabecera ##################################### */
-header {
-    width: 100%;
-    position: fixed;
-    z-index: 1000;
-    max-width: 100vw;
+<head>
 
-}
+    <meta charset="UTF-8">
 
-.nav {
-    background-color: #48e;
-    display: flex;
-    /* Convierte el contenedor en flex */
-    flex-wrap: wrap;
-    align-items: center;
-    /* Centra verticalmente los elementos */
-    justify-content: center;
-    /* Centra horizontalmente los elementos */
-    padding: 10px 20px;
-    /* Añade padding para un poco de espacio a los lados */
-    box-shadow: 0 0 25px #0006;
-}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="IMAGE-BusinessLogo.png">
 
-.nav__list {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    /* Para eliminar los puntos de la lista */
-    text-align: end;
-    display: flex;
-    /* Cambia para un diseño flexible */
-    align-items: center;
-    /* Centra verticalmente los elementos */
-    flex-wrap: wrap;
-}
+    <link rel="stylesheet" href="nosotrosPageStyle.css">
 
-.nav__item {
-    padding: 10px 20px;
-}
+    <title>BakeBots</title>
 
-.nav__link {
-    color: #FFF;
-    text-decoration: none;
-    font-size: large;
-}
 
-.nav__item:hover {
-    background-color: #59e;
-}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
-.nav_main_link
-{
-    border-bottom:solid 2px #fff;
-}
 
-#logo-header {
-    align-items: center;
-    /* Alinea verticalmente el logo */
-    height: 70px;
-}
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var header = document.querySelector("#main-header");
+            var headerHeight = header.offsetHeight;
+            document.documentElement.style.setProperty('--main-header-height', headerHeight + 'px');
+        });
+    </script>
+</head>
 
-@media (max-width: 767px) {
-    .nav__list__container {
-        display: flex;
-        /* Hace que el contenido en el interior sea flexible */
-        flex-direction: row;
-        /* Cambia la dirección de los bloques a una columna en dispositivos móviles */
-        align-items: center;
-        /* Centra los bloques horizontalmente */
-        gap: 10px 20px;
-        /* Espacio entre los items de la lista*/
-        width: 100%;
-        justify-content: center;
-        margin-top: 5%;
-    }
+<body>
+    <header id="main-header">
+        <nav class="nav">
+            <ul class="nav__list">
+                <li id="logo-header" class="nav__item">
+                    <a id="logo-header" href="index.html">
+                        <img src="IMAGE-BuisnessFullLogo-remove.png" alt="Logo de negocio" style="height: 70px;">
+                    </a>
+                </li>
 
-    .nav__item {
-        padding: 10px 5px;
-    }
+                <div class="nav__list nav__list__container">
+                    <li id="inicio" class="nav__item">
+                        <a href="index.html" class="nav__link">Inicio</a>
+                    </li>
 
-    #logo-header {
-        margin: auto;
-    }
+                    <li class="nav__item nav_main_link">
+                        <a href="nosotrosPage.html" class="nav__link">Nosotros</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="ProductsPage.html" class="nav__link">Productos</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="ContactPage.html" class="nav__link">Contacto</a>
+                    </li>
+                </div>
+            </ul>
+        </nav>
+    </header>
 
 
 
-}
 
+        <section id="introduction">
+            <div class="introduction__grid">
+                <div class="introduction__grid__item grid__item-1"><h1>Expertos en Robótica Colaborativa en España</h1></div>
+                <div class="introduction__grid__item grid__item-2"><h2>El éxito de nuestros clientes es nuestro éxito.</h2></div>
+                <div class="introduction__grid__item grid__item-3"><p>Somos conscientes de la particularidad de cada proyecto, por lo que nos ajustamos a las necesidades de cada cliente y hacemos nuestros sus objetivos.</p></div>
+            </div>
+        </section>
 
-/*########################################## Introudccion ##################################### */
-
-#introduction {
-    height: 650px;
-    width: 100%;
-    display: flex;
-    margin-top: var(--main-header-height);
-    background-color: rgba(124, 173, 233, 0.94);
-    justify-content: center;
-    background-image: url("https://static.vecteezy.com/system/resources/previews/001/226/039/non_2x/abstract-technology-geometric-pattern-vector.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-attachment:fixed;
-
-    padding: 20px 0;
-}
-
-.introduction__grid {
-    align-self: center;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
     
-    }
-    .grid__item-1 { grid-area: 1 / 1 / 4 / 4;   display: flex; justify-content: center; align-items: center; }
-    .grid__item-2 { grid-area: 1 / 4 / 6 / 6;  display: flex;  align-items: center; border-left:solid 2px #ffffff; padding: 2px;}
-    .grid__item-3 { grid-area: 4 / 1 / 6 / 4;  display: flex; justify-content: center;  }
+        <section id="our-team">
+            
+            <h2>Nuestro equipo de profesionales expertos en Robótica en España, sabe lo que tiene que hacer</h2>
+            <div class="container__our-team">
+                <div class="texto" id="how-we-help">
+                    
 
-    .grid__item-1 h1{border-bottom:solid #ffffff; padding-bottom: 10px; width: 50%;}
-    .grid__item-2 h2{text-align: end; width: 40%; font-weight: lighter;  white-space: pre-wrap;}
-    .grid__item-3 p{width: 50%;}
+                    <h3>¿COMO PODEMOS AYUDARTE?</h3>
 
+                    <p>BakeBots es CSI (Certified Systems Integrator) de <span class="destacable-text">Universal Robots en España.</span>
 
-/*########################################## Nuestro equipo ##################################### */
+Nacimos en 2024 con el objetivo claro de cambiar los procesos de producción de la empresas
+mediante el uso de los robots colaborativos de Universal Robots.
 
-#our-team
-{
-    align-self: center;
-    padding: 5% 15%;
-    margin: auto;
-}
+Desde nuestros inicios tuvimos clara la necesidad de <span class="destacable-text"> automatizar los finales de línea con
+soluciones de robótica colaborativa </span> que cumplieran con los siguientes requisitos: </p>
 
-#our-team h2
-{
-    border-bottom: solid #ffffff 2px;
-    width: fit-content;
-    padding: 30px 0;
-}
+                    <ul>
+                        <li>
+                            Flexibilidad, el cliente tiene la capacidad de desplazar el equipo dentro de sus
+                            instalaciones.
+                        </li>
+                        <li>
+                            Facilidad de uso y configuración.
+                        </li>
+                        <li>
+                            Calidad de fabricación, con componentes de primeras marcas.
+                        </li>
+                        <li>
+                            Equipo económico y rentable para el cliente final.
+                        </li>
+                    </ul>
 
-#how-we-help h3
-{
-    margin-top: 40px;
-    color: aqua;
-}
+                    <div>
+                        <p>A día de hoy, ya somos un referente Nacional en cuanto al desarrollo de aplicaciones con este
+tipo de robots.
 
-#how-we-help p
-{
-    font-weight:lighter;
-    white-space: pre-wrap;
-    margin: 2% 0 3% 0;
-}
+Confíe en BakeBots y nuestro equipo de asesores en ingeniería robótica, para llevar su empresa
+al siguiente nivel de automatización y éxito. Estamos ansiosos por ser su socio en la búsqueda
+de soluciones robóticas innovadoras y efectivas.</p>
+                        </div>
+                        <div class="container"><button class="button"><a href="mailto:BakeBots@gmail.com">👤Solicitar asesoria ahora</a></button></div>
+                        
+                </div>
 
-.destacable-text
-{
-    font-weight: 700;
-}
-
-#how-we-help ul
-{
-    padding-left:0;
-    list-style-position:inside;
-    list-style-type: circle;
-    margin-bottom: 3% ;
-}
-
-.container__our-team
-{
-
-    display:flex;
-    flex-direction: row;
-    gap:80px;
-    align-items: center;
-}
-
-.our-team__img-container img
-{
-    width:500px;
-    border-radius: 40px;
-    box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.28);
-}
+                <div class="our-team__img-container">
+                    <img src="https://thumbs.dreamstime.com/b/confectionery-factory-production-line-baking-cookies-biscuits-working-conveyor-belt-118991026.jpg" alt="imagen no encontrada">
+                </div>
+            
+            </div>
+            
 
 
-button {
-    font-size: 1.4em;
-    padding: 0.6em 0.8em;
-    border-radius: 0.5em;
-    border: none;
-    background-color: #000;
-    color: #fff;
-    cursor: pointer;
-    box-shadow: 2px 2px 3px #000000b4;
-}
-button a
-{
-    text-decoration: none;
-    color: #fff;
-}
+        </section>
 
-.container {
-    width: max-content;
-    position: relative;
-    padding: 3px;
-    background: linear-gradient(90deg, #03f44f, #2104ff);
-    border-radius: 0.9em;
-    transition: all 0.4s ease;
-    margin: 10% 0;
-}
+        <section id="our-trajectory">
+                <div class="our-trajectory__text-container">
+                    <h2>Nuestra Trayectoria</h2>
+                    <p>Con mas de 2 años de experiencia y una base de sólida de clientes satisfechos, hemos demostrado nuestra dedicación y compromiso en brindar soluciones de calidad a nuestros socios comerciales.</p>
+                </div>
+                
+                <div class="count-box__container">
+                    <div class="card">
 
-.container::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    margin: auto;
-    border-radius: 0.9em;
-    z-index: -10;
-    filter: blur(0);
-    transition: filter 0.4s ease;
-}
+                        <div class="card-info">
+                            <p class="title secondary-text">Mas de</p>
+                            <h3 class="title primary-text">4</h3>
+                            <p class="title secondary-text"> años de experiencia</p>
+                        </div>
+                        
+                    </div>
+                    <div class="card">
 
-.container:hover::before {
-    background: linear-gradient(90deg, #03f44f, #2104ff);
-    filter: blur(1.2em);
-}
+                        <div class="card-info">
+                            <p class="title secondary-text">Mas de</p>
+                            <h3 class="title primary-text">30</h3>
+                            <p class="title secondary-text"> clientes satisfechos</p>
+                        </div>
+                        
+                    </div>
+                </div>
+            </section>
 
-.container:active::before {
-    filter: blur(0.2em);
-}
+            <section id="form-contact">
 
-#our-trajectory {width: 100vw; height:450px; background-color: #4c4c4c4a; box-shadow:  0 0 60px #11a3c8; text-align: center;}
+                <div class="form__flex-box">
+            
+                    <div class="formulari__text-info">
+                        <h3>¿Cómo garantizamos la integración de robots paletizadores industriales en su planta?</h3>
+                        <p>En una rápida llamada, te brindamos una demostración sobre cómo logramos una exitosa integración de robots paletizadores industriales en su planta. Descubrirás cómo Neobotik puede:</p>
+                        <ul>
+                            <li>Nuestros robots paletizadores ofrecen flexibilidad total. Tienes el control para moverlos fácilmente dentro de tus instalaciones, sin obstáculos, lo que optimiza tu proceso de producción.</li>
+                            <li>Garantizamos la calidad de nuestros robots paletizadores al usar componentes de primeras marcas y productos de alta calidad, lo que aumenta la durabilidad y eficiencia en tu planta.</li>
+                            <li>En Neobotik, priorizamos la facilidad de uso y configuración de nuestros robots paletizadores. Ofrecemos un diseño intuitivo y una interfaz amigable para una puesta en marcha rápida y sin complicaciones.</li>
+                        </ul>
+                    </div>
+                    <div class="formulari__input-container">
+            
+                        <form id="myForm">
+                            <h2>Formulario de contacto</h2>
+                            <fieldset>
+                                <legend>Información básica</legend>
+                                <input type="text" name="user_name" id="" placeholder = "Nombre*" required minlength="3">
+                                <input type="text" name="user_surname" id="" placeholder = "Apellido*"required required minlength="3">
+                            </fieldset>
+                            
+                            <fieldset>
+                                <legend>Información de contacto</legend>
+                                <input type="email" name="user_email" id="" placeholder = "example@gmail.com*"required>
+                                <input type="tel" name="user_phone-number" id="" placeholder = "Telefono*" pattern="[0-9]{9}" required>
+                                <input type="text" name="user_company" id="" placeholder = "Empresa*"required>
+                                <select name="user_company-rank" id="">
+                                    <option value="">Cargo en la empresa</option>
+                                    <option value="">CEO / Director general / Gerente</option>
+                                    <option value="">Responsable de ingeniería/ Oficina técnica</option>
+                                    <option value="">Responsable / Gerente de producción </option>
+                                    <option value="">Responsable / Gerente de mantenimento</option>
+                                    <option value="">Responsable / Gerente de operaciones</option>
+                                    <option value="">Responsable / Gerente de logística</option>
+                                    <option value="">Responsable de almacen</option>
+                                    <option value="">Responsable / Gerente de calidad</option>
+                                    <option value="">Responsable / Gerente de IT y sistemas</option>
+                                    <option value="">Responsable / Gerente de compras</option>
+                                </select>
 
-.our-trajectory__text-container{padding: 2%; text-align: center;}
+                            </fieldset>
+                            <fieldset>
+                                <legend>Mensaje del usuario</legend>
+                                <textarea id="comentarios" name="user_message" rows="10" cols="50"placeholder = "Mensaje*" required></textarea>
+                            </fieldset>
 
-.count-box__container{
-    min-width: 100px;
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 100px;
-    margin-top: 5%;
-}
-
-.card {
-    --background: linear-gradient(to bottom, #13b37f 0%, #11a3c8 100%);
-    width: 20%;
-    min-width: 150px;
-    height: 254px;
-    padding: 0.9px;
-    border-radius: 0.7rem;
-    overflow: visible;
-    background: #f7ba2b;
-    background: var(--background);
-    position: relative;
-    z-index: 1;
-}
-
-.card::after {
-    position: absolute;
-    content: "";
-    top: 0px;
-    left: 0px;
-    right: 0;
-    z-index: -1;
-    height: 100%;
-    width: 100%;
-    transform: scale(0.9);
-    filter: blur(34.5px);
-    background: #f7ba2b;
-    background: var(--background);
-    transition: opacity 0.5s;
-}
-
-.card-info {
-    --color: #1f1a1d;
-    background: var(--color);
-    color: var(--color);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    overflow: visible;
-    border-radius: 0.7rem;
-    flex-direction: column;
-}
-
-.card .title {
-    font-weight: light;
-    letter-spacing: 0.2em;
-    color: white;
-}
-
-.primary-text,
-.secondary-text {
-    margin: 20px 20px;
-    text-align: center;
-
-}
-
-
-/*########################################## Formulario ##################################### */
-
-.form__flex-box{display: flex;flex-direction: row; gap: 80px;width: 100%; margin: 300px 0; align-items: center; justify-content: center;}
-
-.formulari__text-info{ width: 30em; padding-top: 0;}
-
-.formulari__text-info h3
-{
-    border-bottom: solid #ffffff 2px;
-    width: fit-content;
-    padding: 30px 0;
-    margin-bottom: 40px;
-}
-
-.formulari__text-info ul
-{
-    padding-left:0;
-    list-style-position:inside;
-    list-style-type: circle;
-    margin-bottom: 3% ;
-}
-
-.formulari__text-info ul li
-{
-    margin: 10px 0;
-}
-
-
-form 
-{
-background-color:transparent;
-padding:  10px 20px;
-max-width: 500px;
-margin: auto;
-box-shadow: 0 0 55px #fff2;
-margin-top: 50px;
-border-radius: 8px;
-font-size: 16px;
-}
-
-input,area,select,textarea
-{
-width: 100%;
-box-sizing: border-box;
-padding: 6px 8px;
-border: none;
-border: solid 1px #666;
-box-shadow: 0 0 15px #0003;
-background-color: transparent;
-border-radius: 4px;
-color: #ddd;
-margin: 6px 0;
-}
-
-fieldset{margin: 10px 0 ; border: 1px solid #ddd6; border-radius: 0% 5px;}
-
-legend{padding: 0 6px; font-family: sans-serif;}
-
-textarea{max-width: 100%; resize: none; font-family: sans-serif; min-width: 100%; min-height: 102px;}
-
-#submit-button 
-{
-    width: 100%;
-}
-
-#submit-button:hover
-{
-    background-color: #504e4e;
-}
+                            <button id="submit-button"><input type="submit" name="user_submit"  ></button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+</body>
