@@ -1,13 +1,20 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="IMAGE-BusinessLogo.png">
+
     <link rel="stylesheet" href="ContactStyle.css">
+
     <title>BakeBots</title>
+
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             var header = document.querySelector("#main-header");
@@ -26,16 +33,20 @@
                         <img src="IMAGE-BuisnessFullLogo-remove.png" alt="Logo de negocio" style="height: 70px;">
                     </a>
                 </li>
+
                 <div class="nav__list nav__list__container">
                     <li id="inicio" class="nav__item">
                         <a href="index.html" class="nav__link">Inicio</a>
                     </li>
+
                     <li class="nav__item ">
                         <a href="nosotrosPage.html" class="nav__link">Nosotros</a>
                     </li>
+
                     <li class="nav__item">
                         <a href="ProductsPage.html" class="nav__link">Productos</a>
                     </li>
+
                     <li class="nav__item nav_main_link">
                         <a href="ContactPage.html" class="nav__link">Contacto</a>
                     </li>
@@ -44,76 +55,54 @@
         </nav>
     </header>
 
-    <section id="introduction">
-        <div class="introduction__grid">
-            <div class="introduction__grid__item grid__item-1">
-                <h1>Expertos en Robótica Colaborativa en España</h1>
-            </div>
-            <div class="introduction__grid__item grid__item-2">
-                <h2>El éxito de nuestros clientes es nuestro éxito.</h2>
-            </div>
-            <div class="introduction__grid__item grid__item-3">
-                <p>Somos conscientes de la particularidad de cada proyecto, por lo que nos ajustamos a las necesidades
-                    de cada cliente y hacemos nuestros sus objetivos.</p>
-            </div>
+
+    <!-- Sección principal con bloques -->
+    <main class="main-content">
+        <div class="contact-block">
+            <h2>Esperamos su mensaje</h2>
+            <form class="form">
+                <input type="text" placeholder="Nombre" required>
+                <input type="text" placeholder="Apellido" required>
+                <input type="email" placeholder="Correo electrónico" required>
+                <input type="tel" placeholder="Teléfono" required>
+                <textarea placeholder="Escriba su mensaje" rows="4" required></textarea>
+                <button type="submit">Enviar solicitud</button>
+            </form>
         </div>
-    </section>
 
-    <div class="container">
-        <div id="form-contact">
-            <div class="FormPlace">
-                <div class="form-container">
-                    <form id="myForm">
-                        <h2>Formulario de contacto</h2>
-                        <fieldset>
-                            <legend>Información básica</legend>
-                            <input type="text" name="user_name" placeholder="Nombre*" required minlength="3">
-                            <input type="text" name="user_surname" placeholder="Apellido*" required minlength="3">
-                        </fieldset>
-
-                        <fieldset>
-                            <legend>Información de contacto</legend>
-                            <input type="email" name="user_email" placeholder="example@gmail.com*" required>
-                            <input type="tel" name="user_phone-number" placeholder="Teléfono*" pattern="[0-9]{9}"
-                                required>
-                            <input type="text" name="user_company" placeholder="Empresa*" required>
-                            <select name="user_company-rank">
-                                <option value="">Cargo en la empresa</option>
-                                <option value="CEO">CEO / Director general / Gerente</option>
-                                <option value="Ingeniería">Responsable de ingeniería / Oficina técnica</option>
-                                <option value="Producción">Responsable / Gerente de producción</option>
-                                <!-- Agrega más opciones según sea necesario -->
-                            </select>
-                        </fieldset>
-
-                        <fieldset>
-                            <legend>Mensaje del usuario</legend>
-                            <textarea id="comentarios" name="user_message" rows="10" cols="50" placeholder="Mensaje*"
-                                required></textarea>
-                        </fieldset>
-
-                        <button id="submit-button"><input type="submit" name="user_submit"></button>
-                    </form>
-                </div>
-            </div>
+        <div class="info-block">
+            <h2>Agenda una DEMO Gratuita</h2>
+            <p>
+                Nos comprometemos en la mejora constante de sus procesos productivos. Por ello, queremos demostrar cómo nuestra herramienta ha incrementado la producción en las líneas de packaging.
+            </p>
+            <button class="btn"> <a href="mailto:BakeBots@gmail.com">Reservar DEMO Ahora</a></button>
         </div>
-        <div class="Demo">
-            <h3>Agenda una DEMO Gratuita</h3>
-            <p>Nos comprometemos en la mejora constante de sus procesos productivos. Por ellos nos gustaría demostrar como otras empresas han conseguido un incremento de su producción en las líneas de packaging, por encima del 20 % utilizando nuestras máquinas de paletizado.</p>
-            <button></button>
+
+        <div class="call-block">
+            <h2>¿Prefieres llamarnos?</h2>
+            <p>
+                Estamos disponibles de lunes a viernes, de 10:00 a 15:00. Llámanos para más información.
+            </p>
+            <button class="btn"><a href="tel:+ 959 60 13 83">+34 959 70 64 30</a></button>
         </div>
-        <div class="Call-Us"></div>
-        <h3>¿Prefieres llamarnos?</h3>
-        <p>Si te sientes más cómodo manteniendo una conversación telefónica, estaremos encantados de atenderte de lunes a viernes, de 7:00 a 15:00, en horario de Madrid, a través del siguiente número de teléfono:</p>
-        <button></button>
-        <div class="Where-we-are">
+    </main>
+
+    <!-- Pie de página -->
+    <footer class="footer">
+        <div class="location">
             <h3>¿Dónde estamos?</h3>
-            <p>Estamos en no te importa</p>
+            <p>Polígono Industrial El Rincón Nave 5, 21007 Huelva</p>
         </div>
-        <div class="We-expect-meet-you-here">
-            <h3>¡Esperamos conectarnos contigo en esta plataforma profesional!</h3>
-            <p>Síguenos en LinkedIn para mantenerte al tanto de las últimas novedades, noticias, y contenido relacionado con nuestra empresa! Únete a nuestra comunidad y sé parte de conversaciones relevantes en tu industria.</p>
+        <div class="contact-info">
+            <p>David Muñoz: david.m@gmail.com</p>
+            <p>+34 667 14 89 34</p>
+            <p>Adrián Pérez: a.perez@gmail.com</p>
+            <p>+34 657 51 23 95</p>
         </div>
+        <div class="social">
+            <h3>¡Conéctate con nosotros!</h3>
+            <button class="btn">LinkedIn</button>
+        </div>
+    </footer>
 </body>
-
 </html>
