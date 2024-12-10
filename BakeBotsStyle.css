@@ -482,9 +482,16 @@ text-align: center;
 {
     display: flex;
     width: auto;
-    height: min-content;
+    height: 64px;
     justify-content: center;
     align-items: center;
     gap: 10%;
     margin-top: 5%;
+} 
+
+.companies-belive__img-container img
+{
+    width: 64px;
+    height: 64px;
+
 } 
